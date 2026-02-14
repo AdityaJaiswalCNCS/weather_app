@@ -1,0 +1,9 @@
+# Flutter / Dart
+.dart_tool/
+.build/
+.packages
+.pub/
+build/
+
+# Ignore secret API keys
+lib/secret.dart
