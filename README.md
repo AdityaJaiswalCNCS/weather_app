@@ -1,70 +1,59 @@
 Flutter Weather App
 
-A clean and modern Flutter Weather Application that shows real-time weather data with auto day/night theme, hourly forecast, and smooth UI animations, powered by the OpenWeather API.
+A clean and modern Flutter Weather Application that displays real-time weather data using the OpenWeather API.
+The app features automatic day/night theme, hourly forecast and reactive UI powered by Provider state management.
 
 ✨ Features
 
 🔍 Search weather by city name
 
-🌗 Automatic Day / Night theme based on real weather data
+🌗 Automatic Day/Night theme based on real weather data
 
-⏱️ Hourly weather forecast
+⏱ Hourly weather forecast
 
-🌡️ Temperature in Celsius / Fahrenheit
+🌡 Temperature toggle (Celsius / Fahrenheit)
 
-🔄 Refresh weather data instantly
+🔄 Instant weather refresh
 
-🎨 Smooth UI animations
+⚡ Reactive UI using Provider
 
-📱 Responsive and clean UI
+📡 Real-time weather from OpenWeather API
 
-⚠️ Graceful error handling for invalid cities
+🎨 Smooth animations and clean UI
 
-🛠️ Tech Stack & Packages
-Core Technologies
+⚠ Graceful error handling for invalid city / network
 
-Flutter
+🛠 Tech Stack
 
-Dart
-
-Material UI
-
-Packages & Libraries Used
-
-http → REST API calls
-
-dart:convert → JSON parsing
-
-OpenWeather API → Weather data provider
+Framework: Flutter (Dart)
+State Management: Provider
+Networking: http package
+API: OpenWeather API
+Data Handling: JSON parsing (dart:convert)
 
 📦 Dependencies
 dependencies:
   flutter:
     sdk: flutter
-  http: ^1.2.0
-
-
-(JSON parsing is done using Dart’s built-in dart:convert library)
+  http: ^1.6.0
+  provider: ^6.0.5
 
 📂 Project Structure
 lib/
  ├── main.dart
  ├── weather_screen.dart
- ├── weather_model.dart
+ ├── weather_provider.dart
  ├── weather_services.dart
+ ├── weather_model.dart
  ├── hourly_forecast_item.dart
  ├── additional_info_item.dart
- └── secret.dart   # ignored (API key)
- 🔑 API Key Setup
+ └── secret.dart (ignored)
 
-This project uses OpenWeather API.
+🔑 API Key Setup
 
-Steps:
+Sign up → https://openweathermap.org/api
 
-Sign up at
-👉 https://openweathermap.org/api
-
-Get your API key
+Get API key
 
 Create file:
 
@@ -80,24 +69,11 @@ Add to .gitignore:
 
 lib/secret.dart
 
-▶️ How to Run
+▶️ Run Project
 flutter pub get
 flutter run
 
-🧠 JSON Handling (Important)
-
-API responses are received in JSON format
-
-Parsed using:
-
-import 'dart:convert';
-
-
-Converted into Dart models using WeatherModel.fromJson()
-
-This keeps the code clean, safe, and scalable.
-
-
 👨‍💻 Author
 
-© Aditya Kumar Jaiswal
+Aditya Kumar Jaiswal
+GitHub: https://github.com/AdityaJaiswalCNCS
